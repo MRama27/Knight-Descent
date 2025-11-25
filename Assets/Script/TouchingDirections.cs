@@ -42,7 +42,7 @@ public class TouchingDirections : MonoBehaviour
         private set
         {
             _isOnWall = value;
-            animator.SetBool(AnimationStrings.isOnWall, value);
+             animator.SetBool(AnimationStrings.isOnWall, value);
         }
     }
     

@@ -16,13 +16,13 @@ public class UIManager : MonoBehaviour
 
     private void OnEnable()
     {
-        CharacterEvents.characterDamage += CharacterTookDamage;
+        CharacterEvents.characterDamaged += CharacterTookDamage;
         CharacterEvents.characterHealed += CharacterHealed;
     }
 
     private void OnDisable()
     {
-        CharacterEvents.characterDamage -= CharacterTookDamage;
+        CharacterEvents.characterDamaged -= CharacterTookDamage;
         CharacterEvents.characterHealed -= CharacterHealed;
     }
 

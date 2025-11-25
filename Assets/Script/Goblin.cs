@@ -8,9 +8,9 @@ using UnityEngine.UI;
 
 public class Goblin : MonoBehaviour
 {
-    public float walkAcceleration = 3f;
+    public float walkAcceleration = 30f;
     public float maxSpeed = 3f;
-    public float walkStopRate = 0.5f;
+    public float walkStopRate = 0.05f;
     public DetectionZone attackZone;
     public DetectionZone cliffDetectionZone;
 
