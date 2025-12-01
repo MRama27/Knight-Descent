@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Death
   layers:
   - Default
   - TransparentFX
@@ -43,6 +44,12 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 1686226391
+    locked: 0
+  - name: player
+    uniqueID: 3052711795
+    locked: 0
+  - name: bg depan
+    uniqueID: 3915089627
     locked: 0
   - name: Default
     uniqueID: 0
