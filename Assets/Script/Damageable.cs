@@ -8,7 +8,7 @@ using UnityEngine.Events;
 public class Damageable : MonoBehaviour
 {
     public UnityEvent<int, Vector2> damageableHit;
-    public UnityEvent damageableDeath;
+    public UnityEvent damageableDeath; // Tetap untuk Player/Goblin Game Over
     public UnityEvent<int, int> healthChanged;
     Animator animator;
 
@@ -42,7 +42,7 @@ public class Damageable : MonoBehaviour
 
             if (_health <= 0)
             {
-                IsAlive = false;
+                IsAlive = false; 
             }
 
         }
@@ -55,8 +55,6 @@ public class Damageable : MonoBehaviour
     private bool isInvincible = false;
 
     
-   
-
     private float timeSinceHit = 0;
     public float invincibilityTime = 0.25f;
 
@@ -68,21 +66,37 @@ public class Damageable : MonoBehaviour
         }
         set
         {
-            _isAlive = value;
-            animator.SetBool(AnimationStrings.isAlive, value);
-            Debug.Log("IsAlive set " + value);
+            if (_isAlive != value) 
+            {
+                _isAlive = value;
+                animator.SetBool(AnimationStrings.isAlive, value);
+                Debug.Log("IsAlive set " + value);
+
+                if (!value) // Jika karakter baru saja mati
+                {
+                    // 1. Panggil event lokal (untuk Game Over Player, dll.)
+                    damageableDeath?.Invoke(); 
+
+                    // 🚨 2. TAMBAHKAN LOGIKA INI (HANYA UNTUK BOS)
+                    if (gameObject.CompareTag("Boss"))
+                    {
+                        // Panggil event global yang didengar oleh VictoryHandler
+                        GameEvents.BossDefeated.Invoke(gameObject);
+                    }
+                }
+            }
         }
     }
     
-        public bool LockVelocity{ get
-        {
-            return animator.GetBool(AnimationStrings.lockVelocity);
-        }
-        set
-        {
-            animator.SetBool(AnimationStrings.lockVelocity, value);
-        }
+    public bool LockVelocity{ get
+    {
+        return animator.GetBool(AnimationStrings.lockVelocity);
     }
+    set
+    {
+        animator.SetBool(AnimationStrings.lockVelocity, value);
+    }
+}
 
     private void Awake()
     {

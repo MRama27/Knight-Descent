@@ -196,7 +196,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -356784253
-  m_SortingLayer: -2
+  m_SortingLayer: -4
   m_SortingOrder: -5
   m_Sprite: {fileID: 21300000, guid: 335e30b416040a24b88a1c16eda337f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -322,6 +322,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cc6edb0afb310c48881c15cd8a2df0a, type: 3}
+--- !u!1 &79608537 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5679793173459581000, guid: 9cc6edb0afb310c48881c15cd8a2df0a, type: 3}
+  m_PrefabInstance: {fileID: 79608536}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &570236720
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,7 +574,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -356784253
-  m_SortingLayer: -2
+  m_SortingLayer: -4
   m_SortingOrder: -7
   m_Sprite: {fileID: 21300000, guid: d9caa294ebb856845a4e0af508e49dd3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -659,7 +664,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -356784253
-  m_SortingLayer: -2
+  m_SortingLayer: -4
   m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: 6497b3f1be9ac8240bae284e0c937bad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -749,7 +754,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -356784253
-  m_SortingLayer: -2
+  m_SortingLayer: -4
   m_SortingOrder: -6
   m_Sprite: {fileID: 21300000, guid: f2c63cd02a5021e4aa78859519eef703, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -994,6 +999,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2700777932645632014, guid: 8421c39b2c32d0e4c8414abe0b4db905, type: 3}
+      propertyPath: gameOverScreen
+      value: 
+      objectReference: {fileID: 79608537}
     - target: {fileID: 6290881586031782879, guid: 8421c39b2c32d0e4c8414abe0b4db905, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1150,7 +1159,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -356784253
-  m_SortingLayer: -2
+  m_SortingLayer: -4
   m_SortingOrder: -7
   m_Sprite: {fileID: 21300000, guid: d9caa294ebb856845a4e0af508e49dd3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1241,7 +1250,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -356784253
-  m_SortingLayer: -2
+  m_SortingLayer: -4
   m_SortingOrder: -8
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -56119,7 +56128,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -356784253
-  m_SortingLayer: -2
+  m_SortingLayer: -4
   m_SortingOrder: -9
   m_Sprite: {fileID: 21300000, guid: d663afbbbff98f24a9f752f65d65b07b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -56466,7 +56475,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1686226391
-  m_SortingLayer: -1
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
